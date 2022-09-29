@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
 import Loading from "./Loading";
+import image11 from "../assets/imgs/image11.png"
 
 const Pokedex = () => {
   const userName = useSelector((state) => state.userName);
@@ -51,7 +52,7 @@ const Pokedex = () => {
       <nav className="container__img--pokedex">
         <img
           className="img__pokedex--pokedex"
-          src="./src/assets/imgs/image11.png"
+          src={image11}
           alt="pokedexImg"
         />
         <div className="nav__black--pokedex"></div>

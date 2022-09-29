@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nameUSer } from '../store/slices/userName.slice';
 import { useNavigate } from 'react-router-dom';
-
-
-
+import pokedexImg from "../assets/imgs/image11.png"
+import grupFriends from "../assets/imgs/pngwing.com.png"
+import clipart from "../assets/imgs/clipart1298638.png"
 
 
 
@@ -31,16 +31,16 @@ const Home = () => {
     return (
         <div className='home__cotainer'>
             <nav className='container__img'>
-            <img className='img__home--pokedex' src="./src/assets/imgs/image11.png" alt="pokedexImg" />
+            <img className='img__home--pokedex' src={pokedexImg} alt="pokedexImg" />
             </nav>
             <section className='section__home'>
-                <img className='section__img--grupFriends' src="./src/assets/imgs/pngwing.com.png" alt="" />
+                <img className='section__img--grupFriends' src={grupFriends} alt="grupFriends" />
                 <p> <strong> Hello trainer!! </strong>  give me your name to start. </p>
             </section >
             <form onSubmit={renameUser} className='container__form'>
             <input type="text" onChange={(e) => setImputName(e.target.value)} placeholder="name" />
             <button > 
-                <img src="./src/assets/imgs/clipart1298638.png" alt="" />
+                <img src={clipart} alt="" />
             </button>
             </form>
             <footer className='footer__color--red'>
